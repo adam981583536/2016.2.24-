@@ -36,7 +36,7 @@
         UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 10, self.bounds.size.height - 20)];
        // NSLog(@"2%lf",self.bounds.size.height);
         //view.backgroundColor = [UIColor redColor];
-        [view setImage:[UIImage imageNamed:@"@2x.png"]];
+        [view setImage:[UIImage imageNamed:@"dest_title_rect@2x.png"]];
         //CarFilesOutput/car_images_FISWL/dest_title_rect
         [self addSubview:view];
         

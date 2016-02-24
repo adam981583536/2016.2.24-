@@ -2573,6 +2573,7 @@
 		E7E1B1EE1C7C579900C66989 /* REIThemeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E1B1ED1C7C579900C66989 /* REIThemeView.m */; };
 		E7E1B1F11C7C57A800C66989 /* REIThemeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E1B1F01C7C57A800C66989 /* REIThemeDetailCell.m */; };
 		E7E1B1F41C7C57BA00C66989 /* REIThemeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E1B1F31C7C57BA00C66989 /* REIThemeDetailView.m */; };
+		F4C1C4391C7DE1A20088C65D /* tabbar_share_button_image_hl@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C1C4381C7DE1A20088C65D /* tabbar_share_button_image_hl@2x~ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -5299,6 +5300,7 @@
 		E7E1B1F01C7C57A800C66989 /* REIThemeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REIThemeDetailCell.m; sourceTree = "<group>"; };
 		E7E1B1F21C7C57BA00C66989 /* REIThemeDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REIThemeDetailView.h; sourceTree = "<group>"; };
 		E7E1B1F31C7C57BA00C66989 /* REIThemeDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REIThemeDetailView.m; sourceTree = "<group>"; };
+		F4C1C4381C7DE1A20088C65D /* tabbar_share_button_image_hl@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_share_button_image_hl@2x~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -7988,6 +7990,7 @@
 			children = (
 				E7DE7CF71C7C957A0072A3C5 /* MainModel.h */,
 				E7DE7CF81C7C957A0072A3C5 /* MainModel.m */,
+				F4C1C4381C7DE1A20088C65D /* tabbar_share_button_image_hl@2x~ipad.png */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -9515,6 +9518,7 @@
 				3287DADC1C5B843D00280631 /* user_signup_loc_arrow_320@2x.png in Resources */,
 				3287D8461C5B843D00280631 /* spot_detail_edit_bind_poi_tutorial_0.png in Resources */,
 				3287D8D71C5B843D00280631 /* spot_poi_icons_experience@2x.png in Resources */,
+				F4C1C4391C7DE1A20088C65D /* tabbar_share_button_image_hl@2x~ipad.png in Resources */,
 				3287DA2E1C5B843D00280631 /* tripdisplay_drawermenu_like_normal.png in Resources */,
 				3287DAAD1C5B843D00280631 /* user_friends_search_bg.png in Resources */,
 				3287D38B1C5B843D00280631 /* cityhunter_calendar_left_arrow_hl.png in Resources */,

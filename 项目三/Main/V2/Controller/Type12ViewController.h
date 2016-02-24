@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface Type12ViewController : UIViewController
-
+@property (nonatomic, strong) NSNumber *type12Id;
 @end

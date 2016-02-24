@@ -38,4 +38,9 @@
 @property (nonatomic , copy) NSString *day_count;
 @property (nonatomic , strong) NSNumber *spot_id;//web的关键字
 @property (nonatomic , strong)NSNumber *typeID;
+@property (nonatomic , copy) NSString *trackpoints_thumbnail_image;//type4的头部的地图
+@property (nonatomic , strong) NSDictionary *covered_countries;//里面的城市
+//"name":"icon"这两个key值分别是名字和国旗图标
+
+
 @end

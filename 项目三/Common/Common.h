@@ -18,7 +18,8 @@
 #import "UIImageView+WebCache.h"
 #import "UIView+QFExt.h"
 #import "MJRefresh.h"
-
+#define SKAppkey @"fba06b60e10b"
+#define SKAppsecret @"737823192ae92812fe0c0ff741f30c78"
 //主题
 #define SUBJECT_URL @"http://chanyouji.com/api/articles.json?page=%d"
 /**专题*/

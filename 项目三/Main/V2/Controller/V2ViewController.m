@@ -558,11 +558,19 @@ NSURLSessionDataTask *loadData = [manager  dataTaskWithRequest:request completio
             //          [self presentViewController:type12 animated:YES completion:^{
             //               NSLog(@"我有点小无敌");
             //          }];
+            type12.type12Id = main.typeID;
+
             [self.navigationController pushViewController:type12 animated:YES];
             
         }else{
             
             
+            Type4ViewController *type4 = [[Type4ViewController alloc ] init];
+            
+            type4.type4Id = main.typeID;
+            
+            //   NSLog(@"2%@",main.typeID);
+            [self.navigationController pushViewController:type4 animated:YES];
             
         }
 

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface Type4ViewController : UIViewController
+@property (nonatomic, strong) NSNumber *type4Id;
+@property (nonatomic, strong) NSMutableArray *covered_countriesArr;
+
 
 @end
