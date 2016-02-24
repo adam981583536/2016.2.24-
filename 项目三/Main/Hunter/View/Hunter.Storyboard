@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IdW-yQ-234">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Main Navigation Controller-->
+        <scene sceneID="S3e-B9-dD7">
+            <objects>
+                <navigationController id="IdW-yQ-234" customClass="MainNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SwQ-pO-FkT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gg5-88-P8f" kind="relationship" relationship="rootViewController" id="aqC-cd-d7f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZC4-Do-U7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="377"/>
+        </scene>
+        <!--城市猎人带你玩-->
+        <scene sceneID="ltg-e8-Ifu">
+            <objects>
+                <viewController id="gg5-88-P8f" customClass="HunterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s7x-iu-dS8"/>
+                        <viewControllerLayoutGuide type="bottom" id="86X-vH-1Lv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x4P-CY-mGx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="城市猎人带你玩" id="8uw-MG-C33"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f63-5I-o0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="392"/>
+        </scene>
+    </scenes>
+</document>
