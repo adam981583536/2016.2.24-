@@ -48,12 +48,12 @@
     
 }
 - (void)_creatBack{
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 25)];
     
     // button.backgroundColor = [UIColor blueColor];
-    [button setBackgroundImage:[UIImage imageNamed:@"tabbar_share_button_image_hl@2x~ipad.png"] forState:UIControlStateNormal];
-    
-    button.backgroundColor = [UIColor redColor];
+    [button setImage:[UIImage imageNamed:@"tabbar_share_button_image_hl.png"] forState:UIControlStateNormal];
+    //一开始图片一直没有后来发现要是直接用图片名字的话，如果后缀不对，需要删除
+   // button.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_share_button_image_hl"]];
     [button addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
