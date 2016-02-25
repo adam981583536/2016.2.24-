@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "RootTabBarController.h"
+#import <ShareSDK/ShareSDK.h>
+#import "WeiboSDK.h"
+
 @interface AppDelegate ()
 
 @end
@@ -21,7 +24,24 @@
     self.window.backgroundColor=[UIColor whiteColor];
     [self.window makeKeyAndVisible];
     self.window.rootViewController=[[RootTabBarController alloc]init];
-
+    [ShareSDK registerApp:SKAppkey];//字符串api20为您的ShareSDK的AppKey
+    
+    //添加新浪微博应用 注册网址 http://open.weibo.com
+    [ShareSDK connectSinaWeiboWithAppKey:@"97284776"
+                               appSecret:@"14ab535b16d2170f230ce632910bbe13"
+                             redirectUri:@"http://weibo.com/5238298133/profile?topnav=1&wvr=6&is_all=1"];
+//    //当使用新浪微博客户端分享的时候需要按照下面的方法来初始化新浪的平台
+//    
+//    [ShareSDK  connectSinaWeiboWithAppKey:@"97284776"
+//                                appSecret:@"14ab535b16d2170f230ce632910bbe13"
+//                              redirectUri:@"http://weibo.com/5238298133/profile?topnav=1&wvr=6&is_all=1"
+//                              weiboSDKCls:[WeiboSDK class]];
+//
+//    //添加腾讯微博应用 注册网址 http://dev.t.qq.com
+//    [ShareSDK connectTencentWeiboWithAppKey:@"801307650"
+//                                  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
+//                                redirectUri:@"http://www.sharesdk.cn"];
+//
     
     return YES;
 }
