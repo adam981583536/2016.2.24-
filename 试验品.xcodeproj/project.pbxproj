@@ -2598,6 +2598,9 @@
 		F4C1C4781C7DE4650088C65D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C1C4771C7DE4650088C65D /* ImageIO.framework */; };
 		F4C1C47A1C7DE46C0088C65D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C1C4791C7DE46B0088C65D /* AdSupport.framework */; };
 		F4C1C47C1C7DE4740088C65D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C1C47B1C7DE4740088C65D /* libsqlite3.tbd */; };
+		F4ECC6DB1C81E86D00728D55 /* ff_QRCodeScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4ECC6DA1C81E86D00728D55 /* ff_QRCodeScanLine@2x.png */; };
+		F4ECC6DE1C81E87900728D55 /* ScanerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECC6DD1C81E87900728D55 /* ScanerView.m */; };
+		F4ECC6E11C81E8AF00728D55 /* ScanerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECC6E01C81E8AF00728D55 /* ScanerVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -5361,6 +5364,11 @@
 		F4C1C4771C7DE4650088C65D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		F4C1C4791C7DE46B0088C65D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F4C1C47B1C7DE4740088C65D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F4ECC6DA1C81E86D00728D55 /* ff_QRCodeScanLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ff_QRCodeScanLine@2x.png"; sourceTree = "<group>"; };
+		F4ECC6DC1C81E87400728D55 /* ScanerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanerView.h; sourceTree = "<group>"; };
+		F4ECC6DD1C81E87900728D55 /* ScanerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanerView.m; sourceTree = "<group>"; };
+		F4ECC6DF1C81E8A000728D55 /* ScanerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanerVC.h; sourceTree = "<group>"; };
+		F4ECC6E01C81E8AF00728D55 /* ScanerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanerVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -8319,6 +8327,7 @@
 		5D9692121C58B2AC006B5987 /* V2 */ = {
 			isa = PBXGroup;
 			children = (
+				F4ECC6D91C81E66100728D55 /* Scan */,
 				3295BD201C7C050A004DE09F /* Controller */,
 				3295BD2D1C7C050A004DE09F /* Model */,
 				3295BD301C7C050A004DE09F /* View */,
@@ -8680,6 +8689,18 @@
 				F4C1C4581C7DE38B0088C65D /* ShareSDKShareActionSheet.framework */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		F4ECC6D91C81E66100728D55 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				F4ECC6DA1C81E86D00728D55 /* ff_QRCodeScanLine@2x.png */,
+				F4ECC6DC1C81E87400728D55 /* ScanerView.h */,
+				F4ECC6DD1C81E87900728D55 /* ScanerView.m */,
+				F4ECC6DF1C81E8A000728D55 /* ScanerVC.h */,
+				F4ECC6E01C81E8AF00728D55 /* ScanerVC.m */,
+			);
+			path = Scan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -10883,6 +10904,7 @@
 				3287D5A71C5B843D00280631 /* map_back_button@2x.png in Resources */,
 				3287D6831C5B843D00280631 /* pin_Traffic.png in Resources */,
 				3287D8221C5B843D00280631 /* sleep_icon_small.png in Resources */,
+				F4ECC6DB1C81E86D00728D55 /* ff_QRCodeScanLine@2x.png in Resources */,
 				3287D33E1C5B843D00280631 /* ch_tabbar_message_n.png in Resources */,
 				3287D5A91C5B843D00280631 /* map_cover@2x.png in Resources */,
 				3287D2D81C5B843C00280631 /* ch_mine_my_review_hl.png in Resources */,
@@ -11266,9 +11288,11 @@
 				325F3EDF1C63A48D002633D3 /* AFHTTPRequestOperation.m in Sources */,
 				32403C711C68DC2E0095AD5F /* UIView+QFExt.m in Sources */,
 				3295BC761C7BF374004DE09F /* MyTableViewCell.m in Sources */,
+				F4ECC6E11C81E8AF00728D55 /* ScanerVC.m in Sources */,
 				3295BD1C1C7C0311004DE09F /* SequenceTableViewCell.m in Sources */,
 				32403C9E1C6A12720095AD5F /* SDWebImageDownloader.m in Sources */,
 				3295BC711C7BF374004DE09F /* SettingViewController.m in Sources */,
+				F4ECC6DE1C81E87900728D55 /* ScanerView.m in Sources */,
 				5D9691D01C586A20006B5987 /* AppDelegate.m in Sources */,
 				E7DE7CB71C7C7D700072A3C5 /* REIHotelController.m in Sources */,
 				E7DE7CBA1C7C7D820072A3C5 /* REIAllController.m in Sources */,

@@ -10,6 +10,7 @@
 #import "MainModel.h"
 #import <ShareSDK/ShareSDK.h>
 //#import <ShareSDKUI/ShareSDK+SSUI.h>
+#import "ScanerVC.h"
 @interface Type4ViewController ()
 
 @end
@@ -71,9 +72,9 @@
     
 }
 - (void)scaPress:(UIButton *)sender{
-    //    ScanViewController *scan = [[ScanViewController alloc ] init];
-    //    [self.navigationController pushViewController:scan animated:YES];
-    //
+    ScanerVC *vc = [[ScanerVC alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
