@@ -58,10 +58,25 @@
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
     
+    UIButton *scaButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 25)];
+    [scaButton setTitle:@"扫两扫" forState:UIControlStateNormal];
     
-    self.navigationItem.rightBarButtonItem = item;
+    [scaButton addTarget:self action:@selector(scaPress:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *scaItem = [[UIBarButtonItem alloc] initWithCustomView:scaButton];
+    
+    NSArray *arr = @[item,scaItem];
+    self.navigationItem.rightBarButtonItems = arr;
+    
     
 }
+- (void)scaPress:(UIButton *)sender{
+    //    ScanViewController *scan = [[ScanViewController alloc ] init];
+    //    [self.navigationController pushViewController:scan animated:YES];
+    //
+    
+}
+
 
 - (void)_loadData:(NSNumber *)num{
     _covered_countriesArr = [[NSMutableArray alloc] init];
