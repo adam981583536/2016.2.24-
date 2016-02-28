@@ -11,8 +11,13 @@
 #import <ShareSDK/ShareSDK.h>
 //#import <ShareSDKUI/ShareSDK+SSUI.h>
 #import "ScanerVC.h"
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 @interface Type4ViewController ()
+{
 
+    CLLocationManager *_locationManager;//位置管理器
+}
 @end
 
 @implementation Type4ViewController
@@ -66,10 +71,28 @@
     
     UIBarButtonItem *scaItem = [[UIBarButtonItem alloc] initWithCustomView:scaButton];
     
-    NSArray *arr = @[item,scaItem];
+    UIButton *locaButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 25)];
+    [locaButton setTitle:@"定位" forState:UIControlStateNormal];
+    
+    [locaButton addTarget:self action:@selector(locaPress:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *locaItem = [[UIBarButtonItem alloc] initWithCustomView:locaButton];
+    
+    NSArray *arr = @[item,scaItem,locaItem];
     self.navigationItem.rightBarButtonItems = arr;
     
     
+}
+- (void)locaPress:(UIButton *)sender{
+
+    NSLog(@"哈哈骗你的还没有做");
+    
+    if (_locationManager == nil) {
+        _locationManager = [[CLLocationManager alloc] init];
+        
+        
+    }
+
 }
 - (void)scaPress:(UIButton *)sender{
     ScanerVC *vc = [[ScanerVC alloc] init];

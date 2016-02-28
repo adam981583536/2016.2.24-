@@ -2601,6 +2601,7 @@
 		F4ECC6DB1C81E86D00728D55 /* ff_QRCodeScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4ECC6DA1C81E86D00728D55 /* ff_QRCodeScanLine@2x.png */; };
 		F4ECC6DE1C81E87900728D55 /* ScanerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECC6DD1C81E87900728D55 /* ScanerView.m */; };
 		F4ECC6E11C81E8AF00728D55 /* ScanerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECC6E01C81E8AF00728D55 /* ScanerVC.m */; };
+		F4FAE6151C8329D10028EC72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FAE6141C8329D10028EC72 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -5369,6 +5370,7 @@
 		F4ECC6DD1C81E87900728D55 /* ScanerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanerView.m; sourceTree = "<group>"; };
 		F4ECC6DF1C81E8A000728D55 /* ScanerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanerVC.h; sourceTree = "<group>"; };
 		F4ECC6E01C81E8AF00728D55 /* ScanerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanerVC.m; sourceTree = "<group>"; };
+		F4FAE6141C8329D10028EC72 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -5376,6 +5378,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FAE6151C8329D10028EC72 /* CoreLocation.framework in Frameworks */,
 				F4C1C47C1C7DE4740088C65D /* libsqlite3.tbd in Frameworks */,
 				F4C1C47A1C7DE46C0088C65D /* AdSupport.framework in Frameworks */,
 				F4C1C4781C7DE4650088C65D /* ImageIO.framework in Frameworks */,
@@ -8125,6 +8128,7 @@
 		5D9691BF1C586A20006B5987 = {
 			isa = PBXGroup;
 			children = (
+				F4FAE6141C8329D10028EC72 /* CoreLocation.framework */,
 				F4C1C47B1C7DE4740088C65D /* libsqlite3.tbd */,
 				F4C1C4791C7DE46B0088C65D /* AdSupport.framework */,
 				F4C1C4771C7DE4650088C65D /* ImageIO.framework */,

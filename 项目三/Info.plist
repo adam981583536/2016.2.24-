@@ -2,10 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSHumanReadableCopyright</key>
+	<string></string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>好</string>
+	<string>地理位置请求</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>好</string>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>NSLocationUsageDescription</key>
@@ -26,6 +28,8 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
