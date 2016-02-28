@@ -2602,6 +2602,7 @@
 		F4ECC6DE1C81E87900728D55 /* ScanerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECC6DD1C81E87900728D55 /* ScanerView.m */; };
 		F4ECC6E11C81E8AF00728D55 /* ScanerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECC6E01C81E8AF00728D55 /* ScanerVC.m */; };
 		F4FAE6151C8329D10028EC72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FAE6141C8329D10028EC72 /* CoreLocation.framework */; };
+		F4FAE6181C832DB20028EC72 /* Mapmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FAE6171C832DB20028EC72 /* Mapmodel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -5371,6 +5372,8 @@
 		F4ECC6DF1C81E8A000728D55 /* ScanerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanerVC.h; sourceTree = "<group>"; };
 		F4ECC6E01C81E8AF00728D55 /* ScanerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanerVC.m; sourceTree = "<group>"; };
 		F4FAE6141C8329D10028EC72 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F4FAE6161C832DB20028EC72 /* Mapmodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mapmodel.h; sourceTree = "<group>"; };
+		F4FAE6171C832DB20028EC72 /* Mapmodel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mapmodel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -8083,6 +8086,8 @@
 			children = (
 				E7DE7CF71C7C957A0072A3C5 /* MainModel.h */,
 				E7DE7CF81C7C957A0072A3C5 /* MainModel.m */,
+				F4FAE6161C832DB20028EC72 /* Mapmodel.h */,
+				F4FAE6171C832DB20028EC72 /* Mapmodel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -11289,6 +11294,7 @@
 				E7E1B1E11C7C573000C66989 /* REIThemeArticleModel.m in Sources */,
 				E7E1B1E31C7C573000C66989 /* REIThemeDetailModel.m in Sources */,
 				E7DE7CA41C7C7CC60072A3C5 /* REINearbyCell.m in Sources */,
+				F4FAE6181C832DB20028EC72 /* Mapmodel.m in Sources */,
 				325F3EDF1C63A48D002633D3 /* AFHTTPRequestOperation.m in Sources */,
 				32403C711C68DC2E0095AD5F /* UIView+QFExt.m in Sources */,
 				3295BC761C7BF374004DE09F /* MyTableViewCell.m in Sources */,

@@ -13,9 +13,10 @@
 #import "ScanerVC.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-@interface Type4ViewController ()
+#import "Mapmodel.h"
+@interface Type4ViewController ()<MKMapViewDelegate>
 {
-
+    MKMapView *mapView;
     CLLocationManager *_locationManager;//位置管理器
 }
 @end
@@ -92,6 +93,39 @@
         
         
     }
+    
+    [_locationManager requestWhenInUseAuthorization];
+    mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    
+    mapView.delegate = self;
+    //地图的显示类型
+    //    MKMapTypeStandard = 0, 基础地图类型 就是我们平常用的
+    //    MKMapTypeSatellite, 卫星类型
+    //    MKMapTypeHybrid, 混合类型
+    //    MKMapTypeSatelliteFlyover
+    //    MKMapTypeHybridFlyover
+    mapView.mapType = MKMapTypeStandard;
+    
+    //设置地图显示的区域1、定位经纬度 2、定义精度 3、设置显示区域
+    CLLocationCoordinate2D coor2d = {30, 115};
+    
+    MKCoordinateSpan span = {0.1,0.1};
+    
+    [mapView setRegion:MKCoordinateRegionMake(coor2d, span) animated:YES];
+    float a,b;
+    for (int i = 0; i < 10; i++) {
+        Mapmodel *anno = [[Mapmodel alloc] init];
+        anno.title = @"导航";
+        anno.subTitle = @"说了导航了";
+        a = coor2d.latitude + i * 0.01;
+        b = coor2d.longitude + i * 0.01;
+        CLLocationCoordinate2D aaa = {a,b};
+        anno.coordinate = aaa;
+        [mapView addAnnotation:anno];
+    }
+    
+    
+    [self.view addSubview:mapView];
 
 }
 - (void)scaPress:(UIButton *)sender{
@@ -160,14 +194,35 @@
                             }];
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma - mark mk mapview delegate 相当于tableViewCell
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    static NSString *indetifier = @"indetifier";
+    
+    //    MKAnnotationView *view = [mapView dequeueReusableAnnotationViewWithIdentifier:indetifier];
+    //    if (!view) {
+    //        view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:indetifier];
+    //
+    //    //是否显示标注视图
+    //    view.canShowCallout = YES;
+    //    //显示辅助图片， 比如每个公司的logo 不同类的建筑标记不一样🏦
+    ////    view.image = [UIImage imageNamed:<#(nonnull NSString *)#>]
+    //    view.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    //    }
+    
+    MKPinAnnotationView *Mkview = [mapView dequeueReusableAnnotationViewWithIdentifier:indetifier];
+    if (!Mkview) {
+        Mkview = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:indetifier];
+        
+        //是否选择从天而降
+        Mkview.animatesDrop = YES;
+        
+        Mkview.pinTintColor = [UIColor cyanColor];
+        
+    }
+    
+    
+    return Mkview;
+}
 
 @end
