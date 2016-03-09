@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "Mapmodel.h"
-@interface Type4ViewController ()<MKMapViewDelegate>
+@interface Type4ViewController ()<MKMapViewDelegate,CLLocationManagerDelegate>
 {
     MKMapView *mapView;
     CLLocationManager *_locationManager;//位置管理器
@@ -96,7 +96,7 @@
     
     [_locationManager requestWhenInUseAuthorization];
     mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
-    
+    mapView.showsUserLocation = YES;//开启定位功能
     mapView.delegate = self;
     //地图的显示类型
     //    MKMapTypeStandard = 0, 基础地图类型 就是我们平常用的
@@ -107,22 +107,36 @@
     mapView.mapType = MKMapTypeStandard;
     
     //设置地图显示的区域1、定位经纬度 2、定义精度 3、设置显示区域
-    CLLocationCoordinate2D coor2d = {30, 115};
+//    //定位图层有3种显示模式，分别为：
+//    
+//    MAUserTrackingModeNone：不跟随用户位置，仅在地图上显示。
+//    MAUserTrackingModeFollow：跟随用户位置移动，并将定位点设置成地图中心点。
+//    MAUserTrackingModeFollowWithHeading：跟随用户的位置和角度移动。
+//    //
+    _locationManager=[[CLLocationManager alloc]init];
     
-    MKCoordinateSpan span = {0.1,0.1};
-    
-    [mapView setRegion:MKCoordinateRegionMake(coor2d, span) animated:YES];
-    float a,b;
-    for (int i = 0; i < 10; i++) {
-        Mapmodel *anno = [[Mapmodel alloc] init];
-        anno.title = @"导航";
-        anno.subTitle = @"说了导航了";
-        a = coor2d.latitude + i * 0.01;
-        b = coor2d.longitude + i * 0.01;
-        CLLocationCoordinate2D aaa = {a,b};
-        anno.coordinate = aaa;
-        [mapView addAnnotation:anno];
+    if (![CLLocationManager locationServicesEnabled]) {
+        NSLog(@"定位服务当前可能尚未打开，请设置打开！");
+        return;
     }
+    
+    //如果没有授权则请求用户授权
+    if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusNotDetermined){
+        [_locationManager requestWhenInUseAuthorization];
+    }else if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusAuthorizedWhenInUse){
+        //设置代理
+        _locationManager.delegate=self;
+        //设置定位精度
+        _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+        //定位频率,每隔多少米定位一次
+        CLLocationDistance distance=10.0;//十米定位一次
+        _locationManager.distanceFilter=distance;
+        //启动跟踪定位
+        [_locationManager startUpdatingLocation];
+    }
+
+    
+    
     
     
     [self.view addSubview:mapView];
@@ -223,6 +237,21 @@
     
     
     return Mkview;
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    CLLocation *location=[locations firstObject];//取出第一个位置
+    CLLocationCoordinate2D coordinate=location.coordinate;//位置坐标
+    NSLog(@"经度：%f,纬度：%f,海拔：%f,航向：%f,行走速度：%f",coordinate.longitude,coordinate.latitude,location.altitude,location.course,location.speed);
+    //如果不需要实时定位，使用完即使关闭定位服务
+    
+   // CLLocationCoordinate2D coor2d = {30, 115};
+    MKCoordinateSpan span = {1,1};
+    [mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+    [mapView setRegion:MKCoordinateRegionMake(coordinate, span) animated:YES];
+    
+
+    [_locationManager stopUpdatingLocation];
 }
 
 @end

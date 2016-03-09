@@ -8779,7 +8779,12 @@
 				TargetAttributes = {
 					5D9691C71C586A20006B5987 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = CXUEP63W8N;
+						DevelopmentTeam = ZGL862DVKN;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					5D9691E01C586A20006B5987 = {
 						CreatedOnToolsVersion = 7.2;
@@ -11571,7 +11576,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/项目三/第三方框架/ShareSDK/Extend/SinaWeiboSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wxhl.---";
+				PRODUCT_BUNDLE_IDENTIFIER = "-81583536";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -11596,7 +11601,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/项目三/第三方框架/ShareSDK/Extend/SinaWeiboSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wxhl.---";
+				PRODUCT_BUNDLE_IDENTIFIER = "-81583536";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -8,6 +8,7 @@
 
 #import "ScrollerViewController.h"
 #import "MainModel.h"
+#import <objc/runtime.h>
 @interface ScrollerViewController ()
 {
     NSString *str;
